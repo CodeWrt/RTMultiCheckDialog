@@ -31,11 +31,13 @@ public class RTMultiCheckDialog extends Dialog {
     private ImageView icon;//标题图片
     private ListView itemList;//选项列表
 
+    //Constant
+    private static double default_widthScale = 0.7; // 默认宽度
+    private static double default_heightScale = 0.7; // 默认高度
+
     //Variable
     private List<String> itemNames;//选项内容
     private List<Boolean> itemChecked;//选项是否选定
-    private double widthScale = 0.7;
-    private double heightScale = 0.7;
     private ArrayList<Map<String, Object>> mData = new ArrayList<Map<String, Object>>();
 
     //Object
@@ -44,6 +46,10 @@ public class RTMultiCheckDialog extends Dialog {
     private OnMultiCheckClickListener mConfirmClickListener;//确认回调
 
     public RTMultiCheckDialog(Activity context) {
+        this(context, default_widthScale, default_heightScale);
+    }
+
+    public RTMultiCheckDialog(Activity context, double widthScale, double heightScale) {
         super(context, R.style.RTMultiCheckDialog);
         mDialogView = LayoutInflater.from(context).inflate(R.layout.multicheck_dialog, null);
         setContentView(mDialogView);
