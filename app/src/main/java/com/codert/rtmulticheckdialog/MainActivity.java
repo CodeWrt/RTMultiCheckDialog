@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initCustomDialog() {
-        RTMultiCheckDialog customDialog = new RTMultiCheckDialog(MainActivity.this)
+        RTMultiCheckDialog customDialog = new RTMultiCheckDialog(MainActivity.this,0.7,0.7)
                 .setTitleText("请选择")
                 .setIcon(R.drawable.image)
                 .setConfirmText("确定")
