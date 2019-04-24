@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rt_border">
+
+            <RelativeLayout
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:scaleType="fitCenter"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/photo"/>
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#212121"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:text="标题"/>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_below="@+id/titleBar"
+                android:layout_above="@+id/selectBar">
+
+            </ListView>
+
+            <RelativeLayout
+                android:id="@+id/selectBar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true">
+                <Button
+                    android:id="@+id/cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_toLeftOf="@+id/centerLine"
+                    android:layout_marginLeft="20dp"
+                    android:layout_centerVertical="true"
+                    android:text="取消"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rt_shapebutton_cancel"/>
+
+                <View
+                    android:id="@+id/centerLine"
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+                </View>
+
+                <Button
+                    android:id="@+id/confirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/centerLine"
+                    android:layout_centerVertical="true"
+                    android:text="确定"
+                    android:textSize="12sp"
+                    android:textColor="#fff"
+                    android:background="@drawable/rt_shapebutton_confirm"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+</LinearLayout>
