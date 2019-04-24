@@ -3,7 +3,7 @@
 
 自定义多选对话框控件。
 ## Preview
-![image](https://github.com/CodeWrt/RTMultiCheckDialog/blob/master/images/dialog.jpg)
+![自定义多选框展示](https://github.com/CodeWrt/RTMultiCheckDialog/blob/master/images/dialog.jpg)
 ## Gradle Dependency
 ```
 allprojects {
